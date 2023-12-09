@@ -3,7 +3,7 @@
 
 
 def canUnlockAll(boxes):
-    """determines if all the boxes can be opened or not
+    """Determines if all the boxes can be opened or not
     Returns:
         True: if all boxes can be opened
         False: otherwise
