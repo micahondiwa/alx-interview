@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""0-pascal_triangle module"""
 from typing import List
 
 
