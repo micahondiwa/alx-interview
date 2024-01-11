@@ -3,27 +3,19 @@
 from typing import List
 
 
-def pascal_triangle(n: int) -> List[list]:
+def pascal_triangle(n):
     """
-    Pascal triangle
+    Generate Pascal's Triangle for n rows.
     """
+
+    triangle = []
+
     if n <= 0:
-        return []
+        return triangle
 
-    if n == 1:
-        return [[1]]
-
-    if n == 2:
-        return [[1], [1, 1]]
-
-    triangle = [[1], [1, 1]]
-
-    for i in range(2, n):
-        temp = [1, 1]
-        for j in range(0, len(triangle[-1]) - 1):
-            a = triangle[-1][j]
-            b = triangle[-1][j + 1]
-            temp.insert(-1, a + b)
-        triangle.append(temp)
-
+    for i in range(n):
+        row = [1] * (i + 1)
+        for j in range(1, i):
+            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+        triangle.append(row)
     return triangle
