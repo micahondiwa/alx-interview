@@ -13,7 +13,7 @@ def validUTF8(data):
         if skip > 0:
             skip -= 1
             continue
-        if type(data[i]) != int or data[i] < 0 or data[i] > 0x10FFFF:
+        if type(data[i]) is not int or data[i] < 0 or data[i] > 0x10FFFF:
             return False
         elif data[i] <= 0x7F:
             skip = 0
@@ -24,7 +24,7 @@ def validUTF8(data):
                 next_body = list(
                     map(
                         lambda x: x & 0b11000000 == 0b10000000,
-                        data[i + 1 : i + span],
+                        data[i + 1: i + span],
                     )
                 )
                 if not all(next_body):
@@ -39,7 +39,7 @@ def validUTF8(data):
                 next_body = list(
                     map(
                         lambda x: x & 0b11000000 == 0b10000000,
-                        data[i + 1 : i + span],
+                        data[i + 1: i + span],
                     )
                 )
                 if not all(next_body):
@@ -54,7 +54,7 @@ def validUTF8(data):
                 next_body = list(
                     map(
                         lambda x: x & 0b11000000 == 0b10000000,
-                        data[i + 1 : i + span],
+                        data[i + 1: i + span],
                     )
                 )
                 if not all(next_body):
