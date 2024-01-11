@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""0-pascal_triangle module"""
+"""pascal_triangle module"""
 
 
 def pascal_triangle(n):
