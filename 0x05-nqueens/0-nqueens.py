@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""n queens finder module.
+"""n-queens finder module.
 """
 import sys
 
