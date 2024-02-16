@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""prime game module.
+"""the prime game module.
 """
 
 
