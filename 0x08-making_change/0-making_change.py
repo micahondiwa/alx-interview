@@ -3,8 +3,8 @@
 
 
 def makeChange(coins, total):
-    """Returns the minimum number of
-    coins needed to get the total,"""
+    """Returns minimum number of
+    coins needed to get the total"""
     if total <= 0:
         return 0
     rem = total
