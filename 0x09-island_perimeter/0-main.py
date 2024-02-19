@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-0-main
+0-main module
 """
 island_perimeter = __import__('0-island_perimeter').island_perimeter
 
