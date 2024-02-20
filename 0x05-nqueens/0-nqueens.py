@@ -59,7 +59,7 @@ def group_exists(group):
         group (list of integers): A group of possible positions.
 
     Returns:
-        bool: True if it exists, otherwise False.
+        bool: True if it exists, otherwise False
     """
     global solutions
     for stn in solutions:
@@ -74,7 +74,7 @@ def group_exists(group):
 
 
 def build_solution(row, group):
-    """Builds a solution for the n queens problem.
+    """Builds a solution for the n queens problem
 
     Args:
         row (int): The current row in the chessboard.
@@ -98,7 +98,7 @@ def build_solution(row, group):
 
 
 def get_solutions():
-    """Gets the solutions for the given chessboard size."""
+    """Gets the solutions for the given chessboard size"""
     global pos, n
     pos = list(map(lambda x: [x // n, x % n], range(n**2)))
     a = 0
